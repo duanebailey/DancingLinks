@@ -1,0 +1,92 @@
+# solve the 2cb#1 puzzle for 1 3x3 cube
+cat <<EOF
+-
+ -
+  -
+   -
+    -
+     -
+      -
+       -
+        -
+         -
+          -
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "  3        " $0}'
+333
+
+  3
+  3
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "1          " $0}'
+111
+ 1
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "       8   " $0}'
+888
+8
+
+8 8
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print " 2         " $0}'
+2
+222
+
+2
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "          b" $0}'
+bb
+ bb
+
+ b
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "     6     " $0}'
+666
+  6
+
+ 
+  6
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "      7    " $0}'
+777
+ 7
+
+ 
+ 7
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "        9  " $0}'
+999
+ 9
+
+9
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "         a " $0}'
+aaa
+  a
+
+a
+a
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "    5      " $0}'
+555
+5
+
+ 5
+.
+EOF
+flatten 3 3 3 <<EOF | tumble 3 3 3 | awk '{print "   4       " $0}'
+444
+
+  4
+.
+EOF
+

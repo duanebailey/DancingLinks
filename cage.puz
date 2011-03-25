@@ -1,0 +1,58 @@
+#!/bin/bash
+# piece 0 is size 45
+
+cat <<EOF          | awk '{print "0             " $0}'
+0000000  00   00   0000000   0               0   00   0               0   00   0               0   0000000   00   00   000000
+EOF
+# piece H is size 1, total 125
+tumble 5 5 5 <<EOF | awk '{print " H            " $0}' | sed -e 's/h/ /g'
+      h                   h   hHh   h                   h
+EOF
+# piece 4 is size 7, total 72
+tumble 5 5 5 <<EOF | awk '{print "  4           " $0}'
+444444   4
+EOF
+# piece 1 is size 8, total 53
+tumble 5 5 5 <<EOF | awk '{print "   1          " $0}'
+11    1    11   1    1   1
+EOF
+# piece 3 is size 8, total 65
+tumble 5 5 5 <<EOF | awk '{print "    3         " $0}'
+333   3    3    3    3   3
+EOF
+# piece B is size 8, total 117
+tumble 5 5 5 <<EOF | awk '{print "     B        " $0}'
+B    BBBBBB                      B
+EOF
+# piece 8 is size 9, total 97
+tumble 5 5 5 <<EOF | awk '{print "      8       " $0}'
+8888888  88
+EOF
+# piece C is size 7, total 124
+tumble 5 5 5 <<EOF | awk '{print "       C      " $0}'
+CCC    C                        CC   C
+EOF
+# piece 2 is size 4, total 57
+tumble 5 5 5 <<EOF | awk '{print "        2     " $0}'
+22    22
+EOF
+# piece 7 is size 6, total 88
+tumble 5 5 5 <<EOF | awk '{print "         7    " $0}'
+777    7                        77
+EOF
+# piece 9 is size 6, total 103
+tumble 5 5 5 <<EOF | awk '{print "          9   " $0}'
+999    99                       9
+EOF
+# piece A is size 6, total 109
+tumble 5 5 5 <<EOF | awk '{print "           A  " $0}'
+AA    AA                       A    A
+EOF
+# piece 6 is size 5, total 82
+tumble 5 5 5 <<EOF | awk '{print "            6 " $0}'
+ 66  66                       6
+EOF
+# piece 5 is size 5, total 77
+tumble 5 5 5 <<EOF | awk '{print "             5" $0}'
+55   55                  5
+EOF

@@ -1,0 +1,86 @@
+#solve the 2cb#1 puzzle
+# piece 0 is box.
+flatten 2 4 7 <<EOF | gawk '{print "0           " $0}'
+ 
+0
+0
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "   3        " $0}'
+333
+
+  3
+  3
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print " 1          " $0}'
+111
+ 1
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "        8   " $0}'
+888
+8
+
+8 8
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "  2         " $0}'
+2
+222
+
+2
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "           b" $0}'
+bb
+ bb
+
+ b
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "      6     " $0}'
+666
+  6
+
+ 
+  6
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "       7    " $0}'
+777
+ 7
+
+ 
+ 7
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "         9  " $0}'
+999
+ 9
+
+9
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "          a " $0}'
+aaa
+  a
+
+a
+a
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "     5      " $0}'
+555
+5
+
+ 5
+.
+EOF
+flatten 2 4 7 <<EOF | tumble 2 4 7 | gawk '{print "    4       " $0}'
+444
+
+  4
+.
+EOF
+
