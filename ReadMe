@@ -1,9 +1,8 @@
-This directory contains software for solving bin-packing and
-covering puzzles, using the dancing-links method of Knuth (see
-paper in this directory).
+This directory contains software for solving bin-packing and covering puzzles,
+using the "dancing links" method of Knuth (see paper in this directory).
 
 The files ending in .puz are shell scripts that generate all the
-orientations for pieces associated with several puzzles.
+orientations for pieces associated with several some sample puzzles:
 
    cage.puz - a 12 piece puzzle that must be inserted into a cage.
               Difficult.  Two solutions, one cannot be assembled.
@@ -14,23 +13,34 @@ orientations for pieces associated with several puzzles.
                two of these cubes may be constructed at the same
                time, using the 11 pieces above.
 
+Orientation aids:
+
 flatten.  Takes a multi-dimensional input and flattens it into a single
-line for use in the cover problems.  A shift to each higher dimension
-is signaled by a carriage return.
+  line for use in the cover problems.  A shift to each higher dimension
+  is signaled by a carriage return.
 
 reshape.  Reverses the effect of flatten.
 
 tumble.  Tumbles a piece into all of its orientations, and prints a
-list of unique orientations.  Inefficient, currently, but works.
+  list of unique orientations.  Currently inefficient, but works.
 
 cover.  Takes a file of lines and prints out a single line that is
-completely and exactly covered by some subset.  Hitting ^\ will give
-status reports.  Using +s will turn on a heuristic that will focus
-the search on the part of the search space with least branching.  Knuth
-thinks this may be faster at solving large problems, but may slow down
-the solution to small ones.
-
-cover2 - a start on a version that implements cover operations using
-bits.
+  completely and exactly covered by some subset.  Hitting ^\ will give
+  status reports.  Using +s will turn on a heuristic that will focus
+  the search on the part of the search space with least branching.  Knuth
+  thinks this may be faster at solving large problems, but may slow down
+  the solution to small ones.
 
 Duane Bailey, August 2003
+
+Shikaku puzzles.
+These are little cover problems that work on a 2D mesh.  At a number of mesh
+locations are placed values (e.g. 12) that are in 1-to-1 correspondence with
+rectangular patches that are used to consistently and completely cover the 
+mesh.
+
+You can read about Shikaku puzzles at Nikoli:
+  http://www.nikoli.com/en/puzzles/shikaku/
+
+shikaku.pdf gives an example puzzle.  As with all Shikaku puzzles, this has
+a unique solution.
